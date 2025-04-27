@@ -1,5 +1,10 @@
-all:
-	python generate.py
+default: generate-python
+
+generate-bash:
+	@bash generate.sh
+
+generate-python:
+	@python generate.py
+
 clean:
-	rm -f error-pages.conf
-	rm -rf error-pages
+	rm -rf error-pages error-pages.conf

@@ -64,9 +64,11 @@ directory = "error-pages"
 if os.path.exists(directory):
   print("ERROR: " + directory + " directory already exists")
   exit()
+
 os.mkdir(directory)
 
 print("Generating error pages...")
+
 for error in errors:
   with open("template.html") as template:
     template = template.read()
