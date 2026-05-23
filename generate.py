@@ -85,6 +85,7 @@ with open(configfile, 'a') as config:
   data += "location ~ ^/error-pages/(?:" + regex + ")\\.html$ {\n"
   data += "  root /var/www/default;\n"
   data += "  auth_basic off;\n"
+  data += "  etag off;\n"
   data += "  internal;\n"
   data += "}\n"
   config.write(data)

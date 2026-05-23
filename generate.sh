@@ -96,6 +96,7 @@ cat >> $config_file << EOF
 location ~ ^/error-pages/(?:$regex)\.html$ {
   root /var/www/default;
   auth_basic off;
+  etag off;
   internal;
 }
 EOF
