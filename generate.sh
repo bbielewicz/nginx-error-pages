@@ -2,13 +2,13 @@
 set -e
 
 declare -A errors
-errors[300]="Multiple Choices"
-errors[301]="Moved Permanently"
-errors[302]="Found"
-errors[303]="See Other"
-errors[304]="Not Modified"
-errors[307]="Temporary Redirect"
-errors[308]="Permanent Redirect"
+#errors[300]="Multiple Choices"
+#errors[301]="Moved Permanently"
+#errors[302]="Found"
+#errors[303]="See Other"
+#errors[304]="Not Modified"
+#errors[307]="Temporary Redirect"
+#errors[308]="Permanent Redirect"
 errors[400]="Bad Request"
 errors[401]="Unauthorized"
 errors[402]="Payment Required"
@@ -56,7 +56,7 @@ errors[511]="Network Authentication Required"
 
 codes=($(echo ${!errors[@]} | tr ' ' $'\n' | sort))
 
-regex="30[0123478]|40[0-9]|41[0-7]|42[12345689]|431|451|50[0-8]|51[01]"
+regex="40[0-9]|41[0-7]|42[12345689]|431|451|50[0-8]|51[01]"
 
 config_file="error-pages.conf"
 if [ -f $config_file ]; then

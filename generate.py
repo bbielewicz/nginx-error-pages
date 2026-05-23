@@ -1,13 +1,13 @@
 import os
 
 errors = [
-  "300 Multiple Choices",
-  "301 Moved Permanently",
-  "302 Found",
-  "303 See Other",
-  "304 Not Modified",
-  "307 Temporary Redirect",
-  "308 Permanent Redirect",
+#  "300 Multiple Choices",
+#  "301 Moved Permanently",
+#  "302 Found",
+#  "303 See Other",
+#  "304 Not Modified",
+#  "307 Temporary Redirect",
+#  "308 Permanent Redirect",
   "400 Bad Request",
   "401 Unauthorized",
   "402 Payment Required",
@@ -53,7 +53,7 @@ errors = [
   "510 Not Extended",
   "511 Network Authentication Required",
 ]
-regex = "30[0123478]|40[0-9]|41[0-7]|42[12345689]|431|451|50[0-8]|51[01]"
+regex = "40[0-9]|41[0-7]|42[12345689]|431|451|50[0-8]|51[01]"
 
 configfile = "error-pages.conf"
 if os.path.exists(configfile):
