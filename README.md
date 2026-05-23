@@ -23,10 +23,9 @@ server {
   listen 80;
   server_name example.com www.example.com;
 
-  include /etc/nginx/snippets/error-pages.conf;
-
   location / {
     return 301 https://example.com$request_uri;
   }
+  include /etc/nginx/snippets/error-pages.conf;
 }
 ```
